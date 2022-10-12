@@ -1,4 +1,4 @@
-package com.program.hroauth.resources;
+package com.program.hroauth.resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,7 +14,6 @@ import com.program.hroauth.services.UserService;
 @RestController
 @RequestMapping(value="/users")
 public class UserResource {
-
 	
 	@Autowired
 	private UserService service;
@@ -27,7 +26,7 @@ public class UserResource {
 		}
 		catch (IllegalArgumentException e) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-		}		
-		
-	}
+		}
+	}	
+
 }
